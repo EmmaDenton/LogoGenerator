@@ -38,8 +38,8 @@ const questions = [
 
   if (shape === 'circle') {
     return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-    <circle cx="100" cy="100" r="50" fill="${shapeColour}" />
-    <text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text>
+    <circle cx="100" cy="100" r="100" fill="${shapeColour}" />
+    <text x="30" y="120" font-size="70px" fill="${textColour}">${text}</text>
     </svg>`;
   }
 

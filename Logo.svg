@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+    <circle cx="100" cy="100" r="100" fill="#9DDFA3" />
+    <text x="30" y="120" font-size="70px" fill="white">EKD</text>
+    </svg>
