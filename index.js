@@ -56,7 +56,7 @@ function writeToFile(fileName, data) {
     if (err) {
       console.log(err);
     } else {
-      console.log('Successfully created Logo.SVG!');
+      console.log('Generated logo.svg');
     }
   });
 }
