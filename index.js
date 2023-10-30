@@ -26,35 +26,46 @@ const questions = [
    },
  ];
 
-const generateSVG = ({
-text, textColour, shape, shapeColour
-}) => {
-  if (shape === circle)
-   return 
-   `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-   <circle cx="100" cy="100" r="50" fill="${shapeColour}" /><text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text>
-    </svg>`
-  if (shape === rectangle)
-  return
-  `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-  <rect cx="100" cy="100" r="50" fill="${shapeColour}" />    <text x="80" y="120" font-size="70px" fill=""${textColour}">${text}</text>
-  </svg>`
-  if (shape === triangle)
-  return
-  `<svg height="200" width="300"> <polygon points="50 15, 100 100, 0 100" style="fill:${shapeColour}" /> <text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text> </svg>`
- };
+ function generateSVG(answers) {
+  const { shape, shapeColour, text, textColour } = answers;
+
+  if (shape === 'rectangle') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+      <rect x="25" y="25" width="250" height="150" fill="${shapeColour}" />    
+      <text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text>
+    </svg>`;
+  }
+
+  if (shape === 'circle') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+    <circle cx="100" cy="100" r="50" fill="${shapeColour}" />
+    <text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text>
+    </svg>`;
+  }
+
+  if (shape === 'triangle') {
+    return `<svg height="200" width="300">
+      <polygon points="50 15, 100 100, 0 100" style="fill:"${shapeColour}" /> 
+      <text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text> 
+    </svg>`;
+  }
+}
 
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!')
-  );
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Successfully created Logo.SVG!');
+    }
+  });
 }
 
 function init() {
   inquirer.prompt(questions).then((answers) => {
-     const data = generateSVG(answers);
+    const data = generateSVG(answers);
     writeToFile(fileName, data);
-   });
- }
+  });
+}
 
 init();
