@@ -44,9 +44,9 @@ const questions = [
   }
 
   if (shape === 'triangle') {
-    return `<svg height="200" width="300">
-      <polygon points="50 15, 100 100, 0 100" style="fill:"${shapeColour}" /> 
-      <text x="80" y="120" font-size="70px" fill="${textColour}">${text}</text> 
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+      <polygon points="75 15, 00 150, 150 150" style="fill:${shapeColour}" /> 
+      <text x="35" y="120" font-size="40px" fill="${textColour}">${text}</text> 
     </svg>`;
   }
 }
