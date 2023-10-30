@@ -1,16 +1,14 @@
 # LogoGenerator
 
-
-  # READMEgenerator
-
   ## Table of Contents
   [Description](#description)
-  [Usage](#usage)
   [Questions](#questions)
   [License](#license)
   
   ## Description
   This project serves as a logo generator. The user will be prompted to specify the desired letters, text color, shape, and shape color for the logo upon triggering Node. When specifying the color, the user can submit either the color name or the hex code. As for the shape, the user can choose from options including circle, rectangle, or triangle. Upon providing inputs for each requirement, an SVG file will be generated.
+
+https://github.com/EmmaDenton/LogoGenerator/assets/141465015/9e8d071e-9d4f-4634-b73a-8e1f8bfcf717
 
   ### User Story
   AS a freelance web developer
